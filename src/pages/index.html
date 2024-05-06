@@ -1,98 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-br" xml:lang="pt-br">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/cssClientes.css">
+  <link rel="stylesheet" href="../styles/reset.css">
   <title>Clientes</title>
-  <link rel="stylesheet" href="cssClientes.css">
-
 </head>
 <header>
-  <img src="logo site.jpg" alt="Logo da empresa" width="300" height="100" style="display:block; margin: 0 auto;">
-  <div class="divButton">
-  <button onclick="aumentarDiminuirFonte()" id="aumentarDimunirFonte" class="fontButton">Aumentar fonte</button>
-  </div>
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid d-flex flex-row-reverse">
+      <a class="navbar-brand" href="#">
+        <img src="../assets/images/building.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        Smart Monkey
+      </a>
+      <div class="col-md-2">
+        <button onclick="aumentarDiminuirFonte()" id="aumentarDimunirFonte" class="btn btn-primary">Aumentar fonte</button>
+      </div>
+    </div> 
+  </nav>
 </header>
 <body>
-  <h1 class="corTexto" tabindex="0">Clientes</h1>
-
-  <input placeholder="Pesquisar pelo CPF/CNPJ" type="text" id="pesquisar" name="pesquisar" maxlength="250">
-  <button onclick="pesquisar()">Buscar</button>
-
-  <div id="divResultado" style="display: none;">
-    <h4>Resultado</h4><br>
-    <label for="cpf_cnpj">CPF/CNPJ</label>
-    <input id="rCpf_cnpj" name="cpf_cnpj" type="text" readonly="true">
-
-    <label for="nome">Nome/Razão Social</label>
-    <input id="rNomeRazao" name="nome" type="text">
-
-    <div id="divfantasia" style="display: none">
-      <label for="fantasia">Nome Fantasia</label>
-      <input id="rNomeFantasia" name="fantasia" type="text">
+  <section class="Hero">
+    <div class="container-lg">
+      <img src="../assets//images/logo site.jpg" alt="">
     </div>
+  </section>
+  <section class="Clientes">
+    <div class="container-lg">
+      <h1 class="corTexto" tabindex="0">Clientes</h1>
 
-    <label for="telefone">Telefone</label>
-    <input id="rTelefone" name="telefone" type="text">
+      <input placeholder="Pesquisar pelo CPF/CNPJ" type="text" id="pesquisar" name="pesquisar" maxlength="250">
+      <button onclick="pesquisar()">Buscar</button>
 
-    <label for="celular">Celular</label>
-    <input id="rCelular" name="celular" type="text">
+      <div id="divResultado" style="display: none;">
+        <h4>Resultado</h4><br>
+        <label for="cpf_cnpj">CPF/CNPJ</label>
+        <input id="rCpf_cnpj" name="cpf_cnpj" type="text" readonly="true">
 
-    <label for="email">E-mail</label>
-    <input id="rEmail" name="email" type="text">
+        <label for="nome">Nome/Razão Social</label>
+        <input id="rNomeRazao" name="nome" type="text">
 
-    <label for="CEP">CEP</label>
-    <input id="rCep" name="CEP" type="text" onchange="cepOnchange()">
+        <div id="divfantasia" style="display: none">
+          <label for="fantasia">Nome Fantasia</label>
+          <input id="rNomeFantasia" name="fantasia" type="text">
+        </div>
+        <label for="telefone">Telefone</label>
+        <input id="rTelefone" name="telefone" type="text">
 
-    <label for="logradouro">Logradouro</label>
-    <input id="rLogradouro" name="logradouro" type="text">
+        <label for="celular">Celular</label>
+        <input id="rCelular" name="celular" type="text">
 
-    <label for="complemento">Complemento</label>
-    <input id="rComplemento" name="complemento" type="text">
+        <label for="email">E-mail</label>
+        <input id="rEmail" name="email" type="text">
 
-    <label for="numero">Número</label>
-    <input id="rNumero" name="numero" type="text">
+        <label for="CEP">CEP</label>
+        <input id="rCep" name="CEP" type="text" onchange="cepOnchange()">
 
-    <label for="bairro">Bairro</label>
-    <input id="rBairro" name="bairro" type="text">
+        <label for="logradouro">Logradouro</label>
+        <input id="rLogradouro" name="logradouro" type="text">
 
-    <label for="cidade">Cidade</label>
-    <input id="rCidade" name="cidade" type="text">
+        <label for="complemento">Complemento</label>
+        <input id="rComplemento" name="complemento" type="text">
 
-    <label for="estado">Estado</label>
-    <input id="rEstado" name="estado" type="text">
+        <label for="numero">Número</label>
+        <input id="rNumero" name="numero" type="text">
 
-    <label for="pais">País</label>
-    <input id="rPais" name="pais" type="text">
-    <button onclick="limparClientes()">Limpar</button>
-    <button onclick="atualizaDados()">Salvar</button>
-    <button onclick="deletaCliente()">Excluir</button>
-  </div>
-  <a href="cadastroCliente.html"><button>Novo Cadastro</button></a>
+        <label for="bairro">Bairro</label>
+        <input id="rBairro" name="bairro" type="text">
 
-  <h1 class="corTexto" tabindex="0">Contas a Receber</h1>
-  <input placeholder="Pesquisar pelo CPF/CNPJ, Número da Fatura ou %%% para todas faturas" type="text" id="pesquisarConta" name="pesquisarConta" maxlength="250">
-  <div class="div" id="resultadoConta" style="display: none;">
-    <table id="tableResultado">
-      <tr>
-        <th class= "th" colspan="7" id="nomeCliente">Cliente: </th>
-      </tr>
-      <tr>
-          <th>Número da Fatura</th>
-          <th>CPF/CNPJ</th>
-          <th>Data de Emissão</th>
-          <th>Data de Vencimento</th>
-          <th>Serviços Contratados</th>
-          <th>Valor</th>
-          <th>Status</th>
-      </tr>
-  </table>
-  </div>
-  <button style="display: none" onclick="limparContas()" id="limparContas">Limpar</button>
-  <button onclick="pesquisarConta()">Buscar</button>
-  <a href="cadastroConta.html"><button>Adicionar Conta a Receber</button></a>
-  <script src="javascriptClientes.js"></script>
-  <script src="javascriptContaReceber.js"></script>
+        <label for="cidade">Cidade</label>
+        <input id="rCidade" name="cidade" type="text">
 
+        <label for="estado">Estado</label>
+        <input id="rEstado" name="estado" type="text">
+
+        <label for="pais">País</label>
+        <input id="rPais" name="pais" type="text">
+        <button onclick="limparClientes()">Limpar</button>
+        <button onclick="atualizaDados()">Salvar</button>
+        <button onclick="deletaCliente()">Excluir</button>
+    </div>
+    <a href="cadastroCliente.html"><button>Novo Cadastro</button></a>
+    </div>
+  </section>
+  <section class="Contas container">
+    <h1 class="corTexto" tabindex="0">Contas a Receber</h1>
+    <input placeholder="Pesquisar pelo CPF/CNPJ, Número da Fatura ou %%% para todas faturas" type="text" id="pesquisarConta" name="pesquisarConta" maxlength="250">
+    <div class="div" id="resultadoConta" style="display: none;">
+      <table id="tableResultado">
+        <tr>
+          <th class= "th" colspan="7" id="nomeCliente">Cliente: </th>
+        </tr>
+        <tr>
+            <th>Número da Fatura</th>
+            <th>CPF/CNPJ</th>
+            <th>Data de Emissão</th>
+            <th>Data de Vencimento</th>
+            <th>Serviços Contratados</th>
+            <th>Valor</th>
+            <th>Status</th>
+        </tr>
+    </table>
+    </div>
+    <button style="display: none" onclick="limparContas()" id="limparContas">Limpar</button>
+    <button onclick="pesquisarConta()">Buscar</button>
+    <a href="cadastroConta.html"><button>Adicionar Conta a Receber</button></a>
+  </section>
+  <script src="../scripts/javascriptClientes.js"></script>
+  <script src="../scripts/javascriptContaReceber.js"></script>
 </body>
-
 </html>
