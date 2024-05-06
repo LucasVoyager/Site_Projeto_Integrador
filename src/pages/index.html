@@ -88,28 +88,30 @@
     <a href="cadastroCliente.html"><button>Novo Cadastro</button></a>
     </div>
   </section>
-  <section class="Contas container">
-    <h1 class="corTexto" tabindex="0">Contas a Receber</h1>
-    <input placeholder="Pesquisar pelo CPF/CNPJ, Número da Fatura ou %%% para todas faturas" type="text" id="pesquisarConta" name="pesquisarConta" maxlength="250">
-    <div class="div" id="resultadoConta" style="display: none;">
-      <table id="tableResultado">
-        <tr>
-          <th class= "th" colspan="7" id="nomeCliente">Cliente: </th>
-        </tr>
-        <tr>
-            <th>Número da Fatura</th>
-            <th>CPF/CNPJ</th>
-            <th>Data de Emissão</th>
-            <th>Data de Vencimento</th>
-            <th>Serviços Contratados</th>
-            <th>Valor</th>
-            <th>Status</th>
-        </tr>
-    </table>
+  <section class="Contas ">
+    <div class="container-lg">
+      <h1 class="corTexto" tabindex="0">Contas a Receber</h1>
+      <input placeholder="Pesquisar pelo CPF/CNPJ, Número da Fatura ou %%% para todas faturas" type="text" id="pesquisarConta" name="pesquisarConta" maxlength="250">
+      <div class="div" id="resultadoConta" style="display: none;">
+        <table id="tableResultado">
+          <tr>
+            <th class= "th" colspan="7" id="nomeCliente">Cliente: </th>
+          </tr>
+          <tr>
+              <th>Número da Fatura</th>
+              <th>CPF/CNPJ</th>
+              <th>Data de Emissão</th>
+              <th>Data de Vencimento</th>
+              <th>Serviços Contratados</th>
+              <th>Valor</th>
+              <th>Status</th>
+          </tr>
+      </table>
+      </div>
+      <button style="display: none" onclick="limparContas()" id="limparContas">Limpar</button>
+      <button onclick="pesquisarConta()">Buscar</button>
+      <a href="cadastroConta.html"><button>Adicionar Conta a Receber</button></a>
     </div>
-    <button style="display: none" onclick="limparContas()" id="limparContas">Limpar</button>
-    <button onclick="pesquisarConta()">Buscar</button>
-    <a href="cadastroConta.html"><button>Adicionar Conta a Receber</button></a>
   </section>
   <script src="../scripts/javascriptClientes.js"></script>
   <script src="../scripts/javascriptContaReceber.js"></script>
