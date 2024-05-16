@@ -27,7 +27,7 @@
 <body class="bg-body-secondary">
   <section class="hero m-5">
     <div class="container-lg">
-        <img class="img-fluid rounded-4 " src="../assets//images/logo site.jpg" alt="">
+        <img class="img-fluid rounded-4" src="../assets//images/logo site.jpg" alt="">
     </div>
   </section>
   <section class="card m-5">
@@ -68,87 +68,103 @@
   </section>
   <section class="clientes" id="clientes">
     <div class="container-lg">
-      <h1 class="corTexto" tabindex="0">Clientes</h1>
-
-      <input placeholder="Pesquisar pelo CPF/CNPJ" type="text" id="pesquisar" name="pesquisar" maxlength="250">
-      <button onclick="pesquisar()">Buscar</button>
-
-      <div id="divResultado" style="display: none;">
-        <h4>Resultado</h4><br>
-        <label for="cpf_cnpj">CPF/CNPJ</label>
-        <input id="rCpf_cnpj" name="cpf_cnpj" type="text" readonly="true">
-
-        <label for="nome">Nome/Razão Social</label>
-        <input id="rNomeRazao" name="nome" type="text">
-
-        <div id="divfantasia" style="display: none">
-          <label for="fantasia">Nome Fantasia</label>
-          <input id="rNomeFantasia" name="fantasia" type="text">
+      <h2 class="h2 mb-5" tabindex="0">Clientes<h2>    
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">*</span>
+          <input placeholder="Pesquisar pelo CPF/CNPJ" class="form-control" type="text" id="pesquisar" name="pesquisar" maxlength="250">
+          <button class="btn btn-secondary" onclick="pesquisar()">Buscar</button>
         </div>
-        <label for="telefone">Telefone</label>
-        <input id="rTelefone" name="telefone" type="text">
+      <div id="divResultado" style="display: none;">
+        <form>
+          <label class="form-label h5" for="cpf_cnpj">CPF/CNPJ</label>
+          <input id="rCpf_cnpj" class="form-control" name="cpf_cnpj" type="text" readonly="true">
 
-        <label for="celular">Celular</label>
-        <input id="rCelular" name="celular" type="text">
+          <label class="form-label h5" for="nome">Nome/Razão Social</label>
+          <input id="rNomeRazao" name="nome" class="form-control" type="text">
 
-        <label for="email">E-mail</label>
-        <input id="rEmail" name="email" type="text">
+          <div id="divfantasia" style="display: none">
+            <label class="form-label h5" for="fantasia">Nome Fantasia</label>
+            <input id="rNomeFantasia" class="form-control" name="fantasia" type="text">
+          </div>
+          <label class="form-label h5" for="telefone">Telefone</label>
+          <input id="rTelefone" class="form-control" name="telefone" type="text">
 
-        <label for="CEP">CEP</label>
-        <input id="rCep" name="CEP" type="text" onchange="cepOnchange()">
+          <label class="form-label h5" for="celular">Celular</label>
+          <input id="rCelular" class="form-control" name="celular" type="text">
 
-        <label for="logradouro">Logradouro</label>
-        <input id="rLogradouro" name="logradouro" type="text">
+          <label class="form-label h5" for="email">E-mail</label>
+          <input id="rEmail" class="form-control" name="email" type="text">
 
-        <label for="complemento">Complemento</label>
-        <input id="rComplemento" name="complemento" type="text">
+          <label class="form-label h5" for="CEP">CEP</label>
+          <input id="rCep" class="form-control" name="CEP" type="text" onchange="cepOnchange()">
 
-        <label for="numero">Número</label>
-        <input id="rNumero" name="numero" type="text">
+          <label class="form-label h5" for="logradouro">Logradouro</label>
+          <input id="rLogradouro" class="form-control" name="logradouro" type="text">
 
-        <label for="bairro">Bairro</label>
-        <input id="rBairro" name="bairro" type="text">
+          <label class="form-label h5" for="complemento">Complemento</label>
+          <input id="rComplemento" class="form-control" name="complemento" type="text">
 
-        <label for="cidade">Cidade</label>
-        <input id="rCidade" name="cidade" type="text">
+          <label class="form-label h5" for="numero">Número</label>
+          <input id="rNumero" class="form-control" name="numero" type="text">
 
-        <label for="estado">Estado</label>
-        <input id="rEstado" name="estado" type="text">
+          <label class="form-label h5" for="bairro">Bairro</label>
+          <input id="rBairro" class="form-control" name="bairro" type="text">
 
-        <label for="pais">País</label>
-        <input id="rPais" name="pais" type="text">
-        <button onclick="limparClientes()">Limpar</button>
-        <button onclick="atualizaDados()">Salvar</button>
-        <button onclick="deletaCliente()">Excluir</button>
+          <label class="form-label h5" for="cidade">Cidade</label>
+          <input id="rCidade" class="form-control" name="cidade" type="text">
+
+          <label class="form-label h5" for="estado">Estado</label>
+          <input id="rEstado" class="form-control" name="estado" type="text">
+
+          <label class="form-label h5" for="pais">País</label>
+          <input id="rPais" class="form-control" name="pais" type="text">
+        </form>
+        <div class="mt-4 mb-4">
+          <button class="btn btn-dark" onclick="limparClientes()">Limpar</button>
+          <button class="btn btn-success" onclick="atualizaDados()">Salvar</button>
+          <button class="btn btn-danger" onclick="deletaCliente()">Excluir</button>
+        </div>
     </div>
-    <a href="./Cadastros/cadastroCliente.html"><button>Novo Cadastro</button></a>
+      <a href="./Cadastros/cadastroCliente.html"><button class="btn btn-secondary">Novo Cadastro</button></a>
     </div>
   </section>
   <section class="contas" id="contas">
     <div class="container-lg">
-      <h1 class="corTexto" tabindex="0">Contas a Receber</h1>
-      <input placeholder="Pesquisar pelo CPF/CNPJ, Número da Fatura ou %%% para todas faturas" type="text" id="pesquisarConta" name="pesquisarConta" maxlength="250">
-      <div class="div" id="resultadoConta" style="display: none;">
-        <table id="tableResultado">
-          <tr>
-            <th class= "th" colspan="7" id="nomeCliente">Cliente: </th>
-          </tr>
-          <tr>
-              <th>Número da Fatura</th>
-              <th>CPF/CNPJ</th>
-              <th>Data de Emissão</th>
-              <th>Data de Vencimento</th>
-              <th>Serviços Contratados</th>
-              <th>Valor</th>
-              <th>Status</th>
-          </tr>
-      </table>
+      <h2 class="h2" tabindex="0">Contas a Receber</h2>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Pesquisar Contas" aria-label="Recipient's username" aria-describedby="basic-addon2" id="pesquisarConta" name="pesquisarConta">
+        <span class="input-group-text" id="basic-addon2">CPF/CNPJ, N°Fat ou %%%</span>
+        <button onclick="pesquisarConta()" class="btn btn-secondary">Buscar</button>
       </div>
-      <button style="display: none" onclick="limparContas()" id="limparContas">Limpar</button>
-      <button onclick="pesquisarConta()">Buscar</button>
-      <a href="./Cadastros/cadastroConta.html"><button>Adicionar Conta a Receber</button></a>
+      <div id="resultadoConta" style="display: none;">
+        <table class="table table-borderless table-sm" id="tableResultado">
+          <thead>
+            <tr>
+              <th scope="col" colspan="7" id="nomeCliente">Cliente: </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <th scope="row">Número da Fatura</th>
+                <th scope="row">CPF/CNPJ</th>
+                <th scope="row">Data de Emissão</th>
+                <th scope="row">Data de Vencimento</th>
+                <th scope="row">Serviços Contratados</th>
+                <th scope="row">Valor</th>
+                <th scope="row">Status</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button style="display: none" onclick="limparContas()" id="limparContas" class="btn btn-dark mb-2">Limpar</button>
+      <a href="./Cadastros/cadastroConta.html"><button class="btn btn-secondary">+ Conta a Receber</button></a>
     </div>
   </section>
+  <footer class="bd-footer">  
+    <div class="d-flex justify-content-center">
+      <p class="p">&copy;Copyright - Todos os direitos reservados - 2024</p>
+    </div>
+  </footer>
   <script src="../scripts/javascriptClientes.js"></script>
   <script src="../scripts/javascriptContaReceber.js"></script>
 </body>

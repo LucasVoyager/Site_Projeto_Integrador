@@ -468,7 +468,7 @@ async function pesquisarConta() {
                         if (registro.hasOwnProperty(propriedade)) {
                             var tdElement = document.createElement("td");
                             if (propriedade == "id") {
-                                tdElement.classList.add("tdElement");
+                                tdElement.classList.add("table-sm");
                                 tdElement.addEventListener("click", function () {
                                     editarConta(this.innerText);
                                 });
